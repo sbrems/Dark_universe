@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{txfonts}
+%\usepackage{upgreek}
+\usepackage{graphicx}
+%\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\newcommand{\question}[2]{\textbf{\textit{#1}}\quad{\footnotesize\textit{(#2 points)}}\\[3mm]}
+\newcommand{\question}[1]{\textbf{\textit{#1}}}
+\newcommand{\points}[1]{\quad{\footnotesize\textit{(#1 points)}}}
+\newcommand{\point}{\quad{\footnotesize\textit{(1 point)}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\pi}{\uppi}
+\newcommand{\ii}{\mathrm{i}}
+\renewcommand{\thefootnote}{\normalsize\fnsymbol{footnote}}
+\DeclareMathOperator{\e}{e}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+\renewcommand{\theequation}{\Roman{equation}}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\LARGE \textbf{Astronomy from 4 perspectives: the Dark Universe}
+\HRule
+\end{center}
+\begin{flushright}
+prepared by: Heidelberg participants and BMS
+\end{flushright}
+\begin{center}
+{\Large \textbf{exercise: the planet of the Petit Prince}}
+\end{center}
+\vspace{5mm}
+
+\begin{enumerate}[\itshape \bfseries 1.]
+
+\item \question{gravity on the planet of the Petit prince}\\
+The Petit Prince by A. de Saint-Exupery lives on a planet which,
+according to images, is roughly $R\simeq 1~\mathrm{m}$ in size and
+because Saint-Exupery does not provide any other information, has a
+value of the surface gravity $g=9.81~\mathrm{m}/\mathrm{s}^2$ similar
+to Earth. But in comparison to Earth where the gradient of the
+acceleration is almost zero, it is much stronger on the planet of the
+Petit Prince. Recall that $G=6.6\times 10^{-11}$ in SI.
+\begin{enumerate}[(a)]
+\item{What is the density $\rho$ and mass $M$ of the planet, assuming that it is uniform? What astrophysical objects would have similar densities?}
+\item{What would be the orbital velocity $\upsilon$ of an object at a height of $1~\mathrm{m}$ above the surface? Could the Petit Prince throw an object horizontally and have it orbit his planet?}
+\item{Can the Petit Prince leave the planet by jumping into space?}
+%\item{What is the pressure inside the planet? Can you estimate the pressure from the observation that the volcanic plume of one of the three volcanoes is about the same height as the Petit Prince?}
+\item{Is it possible that the Petit Prince can observe 43 sunsets each day despite the centrifugal force? How many sunsets can one observe at most?}
+\end{enumerate}
+
+\item \question{devices on the planet of the Petit prince}\\
+Imagine that Saint-Exupery brings simple mechanical systems with him, and find out if they behave differently because of the strong gradient $\partial g/\partial r$ in the gravitational acceleration $g$.
+\begin{enumerate}[(a)]
+\item{What's the relation between the oscillation period $T$ of a pendulum clock as a function of height $h$? Would the oscillation period be independent from the amplitude?}
+\item{Saint-Exupery and the Petit Prince have a glass of orange juice
+    with an ice cube. The Petit Prince's ice cube swims higher or not above the surface of the juice compared to Saint-Exupery's?}
+\end{enumerate}
+
+\item \question{relativity on the planet of the Petit prince}\\
+Are there relativistic effects of gravity on the planet of the Petit Prince?
+\begin{enumerate}[(a)]
+\item{What is the tidal gravitational acceleration between the head
+    and the feet of the Petit Prince? Please compute the difference
+\begin{equation}
+\Delta g = \frac{GM}{R^2}-\frac{GM}{(R+1)^2} 
+\end{equation}
+}
+\item{What is the gravitational time dilation between the head and the feet of the Petit Prince? Please use the formula
+\begin{equation}
+\Delta \tau = \sqrt{1+2\frac{\Phi}{c^2}}\:\Delta t
+\end{equation}
+and approximate the potential as homogeneous, $\Phi = g\Delta r$.
+}
+\end{enumerate}
+\end{enumerate}
+\end{document}
