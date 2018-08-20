@@ -1,0 +1,177 @@
+ \documentclass[a4paper,12pt]{article}
+
+% \usepackage{amssymb}
+ \usepackage{amsmath}
+ \usepackage{amsfonts}
+ \usepackage[makeroom]{cancel}
+ \usepackage{txfonts}
+ \usepackage{upgreek}
+ \usepackage{graphicx}
+% \usepackage{siunitx}
+ \usepackage{enumerate}
+
+ \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+% %\newcommand{\question}[2]{\textbf{\textit{#1}}\quad{\footnotesize\textit{(#2 points)}}\\[3mm]}
+ \newcommand{\question}[1]{\textbf{\textit{#1}}}
+ \newcommand{\points}[1]{\quad{\footnotesize\textit{(#1 points)}}}
+ \newcommand{\point}{\quad{\footnotesize\textit{(1 point)}}}
+ \newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+ \newcommand{\dd}{\mathrm{d}}
+ \renewcommand{\pi}{\uppi}
+ \newcommand{\ii}{\mathrm{i}}
+ \renewcommand{\thefootnote}{\normalsize\fnsymbol{footnote}}
+ \renewcommand{\theequation}{\Roman{equation}}
+ \DeclareMathOperator{\e}{e}
+ \newcommand{\bra}{\langle}
+ \newcommand{\ket}{\rangle}
+ \newcommand{\enkt}{\e^{-\frac{h\nu}{kT}}}
+ \newcommand{\intzinf}{\int_0^\infty}
+ \newcommand{\emx}{\ensuremath{\e^{-x}}}
+
+% \renewcommand{\theequation}{\Roman{equation}}
+
+\begin{document}
+ 	\pagestyle{empty}
+	
+	\begin{center}
+		\LARGE \textbf{Astronomy from 4 Perspectives: the Dark Universe}
+		\HRule
+	\end{center}
+	\begin{flushright}
+		prepared by: Padua participants
+	\end{flushright}
+	\begin{center}
+		{\Large \textbf{Exercise: Planck spectrum and CMB}}\\
+		\vspace*{2mm}
+		{\Large \textbf{Solutions}}
+		
+	\end{center}
+	\vspace{5mm}
+	
+	\begin{enumerate}[\itshape \bfseries 1.]
+	\item \question{Properties of the Planck Spectrum}\\
+	\begin{align}
+	S(\nu) =S_0\frac{\nu^3}{\enkt -1} \Rightarrow S(\nu)=S_0\nu^3 \enkt
+	\end{align}
+	
+	\begin{enumerate}[(a)]
+	\item
+		\begin{align}
+			\intzinf S(\nu)=\intzinf S_0 \nu^3 \enkt
+		\end{align}
+		\begin{align}
+			x=\frac{h\nu}{kT}\quad;\quad \nu=\frac{kT}{h}x \quad ;\quad d\nu=\frac{kT}{h}dx
+		\end{align}
+		\begin{align}
+			\intzinf S_0\left(\frac{kT}{h}\right)^3\enkt\left(\frac{kT}{h}\right) \propto T^4
+		\end{align}
+	\item
+	\begin{align}	
+	 \frac{dS}{d\nu}=0\Rightarrow \frac{dS}{d\nu}=&3S_0\nu^2 \enkt+S_0\nu^3\left(-\frac{h}{kT}\right)\enkt = 
+	 \\&=S_0\nu^3\enkt\left(3-\frac{h\nu}{kT}\right)
+	\end{align}
+	\begin{align}
+	3-\frac{h\nu}{kT}=0 \Rightarrow \nu=\frac{3kT}{h}\propto T
+	\end{align}
+	\item
+	\begin{align}
+	<\nu>=\frac{\intzinf\nu S(\nu)d\nu}{\intzinf S(\nu)d\nu}= \frac{\intzinf \nu^3 S(\nu)d\nu}{\intzinf S(\nu)d\nu}
+	\end{align}
+	\begin{align}
+	x=\frac{h\nu}{kT} \quad ;\quad \nu = \frac{kT}{h}x \quad d\nu = \frac{kT}{h}dx
+	\end{align}
+	\begin{align}
+	\frac{\intzinf S_0 \frac{kT^4}{h}\emx\frac{kT}{h}dx}{\intzinf S_0 \frac{kT^3}{h}\emx\frac{kT}{h}dx}
+	\end{align}
+	\begin{align}
+	S\propto \frac{T^5}{T^4}\propto T
+	\end{align}
+	\item Yes, as both of them depend on T
+	\item Only at high energies
+	\item No, as if we consider any power of T in the exponential, any substitution $x=\frac{h\nu}{kT}$ gives a new differential $d\nu\frac{kT^4}{h}$, both in numerator and denominator
+	\end{enumerate}
+	\item \question{Wien's distribution function}
+		\begin{align}
+		S(\nu) = S_0\nu^n \enkt \quad;\quad\Gamma(n) = \intzinf dx\,x^{n-1}\emx
+		\end{align}
+		\begin{enumerate}[(a)]
+		\item 
+			\begin{align}
+			\intzinf dx\,x^n \e^{-x} = \cancel{-[e^{-x}x^n]^\infty_0} -n\intzinf dx\,x^{n-1}e^{-x}=\intzinf dx\,nx^{n-1}\emx
+			\end{align}
+			\begin{align}
+			=\cancel{x[\emx nx^{n-1}]_0^\infty}-\intzinf dx\,-n(n-1)x^{n-2}=\intzinf dx\, -n(n-1)x^{n-2}\emx
+			\end{align}
+			\begin{align}
+			=[\dots]=
+			\end{align}
+			\begin{align}
+			=n!\intzinf dx\,\emx=n!
+			\end{align}
+		Let's show that $\Gamma(1)=1$:
+			\begin{align}
+			\Gamma (1) =\intzinf x^0\emx
+			\end{align}
+		To demontstrate our relation recursively, let's start by showing it works for n=2:
+		\begin{align}
+		\Gamma(2) =\intzinf x\emx dx = [-\emx x]_0^\infty - \intzinf dx\, (-\emx) = 1
+		\end{align}
+		\begin{align}
+		=(2-1)\Gamma(1)=1
+		\end{align}
+		We can now show it for $n+1$:
+		\begin{align}
+		\Gamma(n+1)=n\,\Gamma(n) = n\,(n-1)\,\Gamma(n-1)=n(n-1)\intzinf x^{n-2}\emx dx
+		\end{align}
+		Let's introduce $m=n-2\quad \Rightarrow \quad n=m+2$
+		\begin{align}
+		\Gamma(n+1)=(m+2)(m+1)\intzinf x^m\emx dx = (m+2)(m+1)m! = (m+2)! = n!
+		\end{align}
+		But
+		\begin{align}
+			\Gamma(n+1)=\intzinf x^n \emx dx = n!
+		\end{align}
+	\item
+		\begin{align}
+		< \nu^m>=\frac{\intzinf \nu^mS(\nu)d\nu}{\intzinf S(\nu)d\nu}
+		\end{align}
+		\begin{align}
+		=\frac{\intzinf\nu^mS_0\nu^n \enkt d\nu}{\intzinf S_0 \nu^n\enkt d\nu}
+		\end{align}
+		\begin{align}
+		x=\frac{h\nu}{kT}\quad;\quad \nu=\frac{kT}{h}x\quad ;\quad d\nu=\frac{kT}{h}dx
+		\end{align}
+		\begin{align}
+		<\nu^m>=\frac{\intzinf\left(\frac{kT}{h}\right)^mS(\nu) \left(\frac{kT}{h}\right)^n\emx \frac{kT}{h}d\nu}{\intzinf S_0\left(\frac{kT}{h}\right)^n\emx \frac{kT}{h}d\nu}
+		\end{align}
+		\begin{align}
+		\propto \frac{T^{m+n+1}}{T^{n+1}} = T^m
+		\end{align}
+		$\Rightarrow$ The momenta scale like the power chosen.
+	\item
+		From the result on point 1(c), we  find:
+		\begin{align}
+		S=\frac{< \nu^3>}{(<\nu>^2)^{3/2}}\propto \frac{T^3}{(T^2)^{3/2}}
+		\end{align}
+		\begin{align}
+		k=\frac{<\nu^4>^2}{<\nu^2>^2}\propto \frac{T^4}{(T^2)^2}
+		\end{align}
+		Neither of which depends on T.
+		\item Yes, again from the result of point 1(c):
+		\begin{align}
+		\frac{<\nu^{2n}>}{< \nu^2>^n}\propto \frac{T^{2n}}{(T^2)^n}
+		\end{align}
+		\end{enumerate}
+	\item \question{Planck Spectra at cosmological distances}\\
+	The solution to this question was discussed live in the classroom
+	\item \question{CMB as a source of energy}
+		\begin{enumerate}[(a)]
+			\item The answer (a) with the Stephan Boltzmann law, the power per $m^2$ can be produced if:
+			\begin{align}
+			w=10^{-5}\sigma T^4=3\cdot 10^{-11} \,\textrm{Wm}^{-2}
+			\end{align}
+		\end{enumerate}
+	\end{enumerate}
+	
+\end{document}

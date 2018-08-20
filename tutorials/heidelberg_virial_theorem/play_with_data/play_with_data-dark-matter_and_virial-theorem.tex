@@ -31,23 +31,23 @@
 \pagestyle{empty}
 
 \begin{center}
-\LARGE \textbf{Astronomy from 4 perspectives: the Dark Universe}
+\LARGE \textbf{Astronomy from 4 Perspectives: the Dark Universe}
 \HRule
 \end{center}
 \begin{flushright}
-prepared by: Heidelberg participants and BMS
+prepared by: Heidelberg participants and Bj{\"o}rn Malte Sch{\"a}fer
 \end{flushright}
 \begin{center}
-{\Large \textbf{play with data: virial theorem and periodic motion}}
+{\Large \textbf{Play with data: virial theorem and periodic motion}}
 \end{center}
 \vspace{5mm}
 
 \noindent
-In these exercises we will explore the virial theorem by solving equations of motions numerically and measuring averaged energies from the solutions.
+In these exercises, we will explore the virial theorem by solving equations of motions numerically and measuring averaged energies from the solutions.
 
 \begin{enumerate}[\itshape \bfseries 1.]
 
-\item \question{virial theorem and the harmonic oscillator}\\
+\item \question{Virial theorem and the harmonic oscillator}\\
 The script \path{harmonic.py} generates a solution to the harmonic oscillator equation $\ddot{x} = -x$ by transforming it with the definition $y=\dot{x}$ into a coupled first order equation,
 \begin{equation}
 \frac{\dd}{\dd t}
@@ -86,7 +86,7 @@ where the angular frequency is set to $\omega=1$ for the numerics.
 \end{figure}
 
 
-\item \question{virial relationship in the anharmonic oscillator}\\
+\item \question{Virial relationship in the anharmonic oscillator}\\
 The virial theorem makes a prediction for the average kinetic and potential energies in any system with a scale-free potential, for instance the anharmonic oscillator with the potential $\Phi\propto x^{2n}$. The script \path{anharmonic.py} solves the equation of motion. The constant of proportionality is set to 1.
 \begin{enumerate}[(a)]
 \item{What's the equation of motion for the potential $\Phi=x^{2n}/(2n)$, and what's the corresponding coupled first order system?}
@@ -102,7 +102,7 @@ The virial theorem makes a prediction for the average kinetic and potential ener
 \end{figure}
 
 
-\item \question{virial theorem in the (generalised) Kepler-problem}\\
+\item \question{Virial theorem in the (generalised) Kepler-problem}\\
 Please simulate Kepler orbits with the script \path{kepler.py}: The equation of motion of a particle in the potential $\Phi\propto 1/r^\alpha$ can be derived from the Lagrange density
 \begin{equation}
 \mathcal{L} = \frac{1}{2}\left(\dot{r}^2+r^2\dot{\varphi}^2\right) + \frac{GM}{r^\alpha}
